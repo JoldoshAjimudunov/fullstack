@@ -1,10 +1,12 @@
+import ModalCart from "./components/modal/ModalCart";
 import "./App.css";
-import BurgerMenu from "./components/burgermenu/BurgerMenu";
+import Footer from "./footer/Footer";
 
 function App() {
   return (
     <div className="App">
-      <BurgerMenu />
+      <ModalCart />
+      <Footer />
     </div>
   );
 }

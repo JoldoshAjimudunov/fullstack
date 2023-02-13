@@ -1,0 +1,35 @@
+.map_cont {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+.map__left {
+  width: 600px;
+  height: 400px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  display: flex;
+  justify-content: start;
+  margin-left: 100px;
+}
+/* .cont__item {
+  
+} */
+.item__text {
+  text-align: start;
+}
+
+.bottom {
+  width: 1600px;
+  height: 100px;
+  background-color: rgb(26, 26, 26);
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+}
