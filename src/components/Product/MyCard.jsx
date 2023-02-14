@@ -8,10 +8,12 @@ import axios from "axios";
 import { API_PRODUCTS } from "../../const";
 import { productContext } from "../Contexts/ProductContextProvider";
 import { Link } from "react-router-dom";
+import { useCart } from "../Contexts/CartContextProvider";
 
 export default function MyCard({ product }) {
   const { deleteProduct } = React.useContext(productContext);
 
+  const { addProductToCart } = useCart();
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -46,6 +48,13 @@ export default function MyCard({ product }) {
             Edit
           </Button>
         </Link>
+        <Button
+          onClick={() => {
+            addProductToCart(product);
+          }}
+        >
+          add
+        </Button>
       </CardActions>
     </Card>
   );

@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import AddProduct from "./components/Product/AddProduct";
 import EditProduct from "./components/Product/EditProduct";
 import ProductList from "./components/Product/ProductList.jsx";
+import CreditCardPage from "./pages/CreditCardPage";
 
 const MainRoutes = () => {
   return (
@@ -15,6 +16,7 @@ const MainRoutes = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/products" element={<ProductList />} />
       <Route path="/admin" element={<AddProduct />} />
+      <Route path="credit" element={<CreditCardPage />} />
       <Route path="/edit/:id" element={<EditProduct />} />
     </Routes>
   );

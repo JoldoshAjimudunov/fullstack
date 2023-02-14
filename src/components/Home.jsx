@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 import "../components/Home.css";
+import Footer from "../footer/Footer";
 
 const Home = () => {
   return (
@@ -177,6 +178,7 @@ const Home = () => {
           Подробнее
         </button>
       </div>
+      <Footer />
     </>
   );
 };

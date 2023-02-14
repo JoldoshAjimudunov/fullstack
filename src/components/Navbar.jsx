@@ -9,6 +9,7 @@ import { useAuth } from "./Contexts/AuthContextProvider";
 // import { useProduct } from "./Contexts/ProductContextProvider";
 import "../components/Navbar.css";
 import { MenuItem } from "@mui/material";
+import ModalCart from "./modal/ModalCart";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -148,6 +149,14 @@ function Navbar() {
                 >
                   Регистрация
                 </a>
+              </li>
+              <li>
+                {/* <a
+                  class="menu__item"
+                  href="#"
+                  onClick={() => navigate("/credit")}
+                /> */}
+                <ModalCart />
               </li>
               <div className="text">
                 191028 Манежный пер.2 Санкт-Петербург Время работы : 12:00-23:00

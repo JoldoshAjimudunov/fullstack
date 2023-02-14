@@ -1,5 +1,9 @@
-.App {
+/* .App {
   text-align: center;
+} */
+.navb__it {
+  display: flex;
+  align-items: center;
 }
 
 .header {
