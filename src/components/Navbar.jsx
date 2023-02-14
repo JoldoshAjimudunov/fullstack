@@ -83,12 +83,17 @@ function Navbar() {
           {user ? (
             <>
               <li>
+                <a class="menu__item" href="#" onClick={() => navigate("/")}>
+                  Главная
+                </a>
+              </li>
+              <li>
                 <a
                   class="menu__item"
                   href="#"
                   onClick={() => navigate("/products")}
                 >
-                  Products
+                  Меню
                 </a>
               </li>
               <li>
@@ -97,12 +102,12 @@ function Navbar() {
                   href="#"
                   onClick={() => navigate("/admin")}
                 >
-                  Admin Add product
+                  Добавить Продукт{" "}
                 </a>
               </li>
               <li>
                 <a class="menu__item" href="#" onClick={() => logout()}>
-                  logout
+                  Выйти
                 </a>
               </li>
               <div className="text">
@@ -113,12 +118,17 @@ function Navbar() {
             <>
               {" "}
               <li>
+                <a class="menu__item" href="#" onClick={() => navigate("/")}>
+                  Главная
+                </a>
+              </li>
+              <li>
                 <a
                   class="menu__item"
                   href="#"
                   onClick={() => navigate("/products")}
                 >
-                  Products
+                  Меню
                 </a>
               </li>
               <li>
@@ -127,7 +137,7 @@ function Navbar() {
                   href="#"
                   onClick={() => navigate("/login")}
                 >
-                  Login
+                  Войти
                 </a>
               </li>
               <li>
@@ -136,7 +146,7 @@ function Navbar() {
                   href="#"
                   onClick={() => navigate("/register")}
                 >
-                  Register
+                  Регистрация
                 </a>
               </li>
               <div className="text">

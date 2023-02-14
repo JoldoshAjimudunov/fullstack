@@ -35,12 +35,12 @@ export default function Register() {
 
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     if (!email.trim() || !password.trim() || !confirmPassword.trim()) {
       alert("Заполните поля!");
       return;
     }
-
+    e.preventDefault();
     let formData = new FormData();
     formData.append("email", email);
     formData.append("password", password);
@@ -51,7 +51,7 @@ export default function Register() {
   return (
     <div class="header" theme={theme}>
       <div class="container">
-        <form action="" method="POST" class="form">
+        <form class="form">
           <h1>Login</h1>
 
           <img

@@ -27,6 +27,7 @@ const AuthContextProvider = ({ children }) => {
 
   const login = async (formData, email) => {
     try {
+      console.log(API_AUTH);
       const res = await axios.post(`${API_AUTH}login/`, formData);
       console.log(res.data);
       localStorage.setItem("token", JSON.stringify(res.data));
