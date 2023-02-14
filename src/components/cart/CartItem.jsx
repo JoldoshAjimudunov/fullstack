@@ -2,13 +2,14 @@ import { Button, CardMedia, Grid, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { useCart } from "../contexts/CartContextProvider";
+import cl from "./Cart.module.css";
 
 const CartItem = ({ item }) => {
   const { changeProductCount, deleteCartProduct } = useCart();
 
   return (
-    <Grid container spacing={5} alignItems="center">
-      <Grid item>
+    <Grid className={cl.cart__cont} container spacing={2} alignItems="center">
+      <Grid className={cl.cart__img}>
         <Box
           component="img"
           sx={{
@@ -19,24 +20,42 @@ const CartItem = ({ item }) => {
           alt={item.item.title}
         />
       </Grid>
-      <Grid item>
-        <Typography gutterBottom variant="p" component="div">
+      <Grid className={cl.cart__title}>
+        <Typography
+          className={cl.cart__item}
+          gutterBottom
+          variant="p"
+          component="div"
+        >
           {item.item.title}
         </Typography>
       </Grid>
-      <Grid item>
-        <Typography gutterBottom variant="p" component="div">
+      <Grid>
+        <Typography
+          className={cl.cart__item}
+          gutterBottom
+          variant="p"
+          component="div"
+        >
           {item.item.type}
         </Typography>
       </Grid>
-      <Grid item>
-        <Typography variant="p" color="text.secondary">
+      <Grid>
+        <Typography
+          className={cl.cart__item}
+          variant="p"
+          color="text.secondary"
+        >
           Price: {item.item.price}$
         </Typography>
       </Grid>
-      <Grid item>
-        <Typography variant="p" color="text.secondary">
-          Quantity:{" "}
+      <Grid>
+        <Typography
+          className={cl.cart__item}
+          variant="p"
+          color="text.secondary"
+        >
+          {" "}
           <input
             type="number"
             value={item.count}
@@ -46,12 +65,16 @@ const CartItem = ({ item }) => {
           ></input>
         </Typography>
       </Grid>
-      <Grid item>
-        <Typography variant="p" color="text.secondary">
+      {/* <Grid item>
+        <Typography
+          className={cl.cart__item}
+          variant="p"
+          color="text.secondary"
+        >
           SubPrice: {item.subPrice}$
         </Typography>
-      </Grid>
-      <Grid item>
+      </Grid> */}
+      <Grid>
         <Button
           style={{
             backgroundColor: "#eb5349",

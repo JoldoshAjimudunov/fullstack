@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={cl.bottom}>Makers</div>
+      <div className={cl.bottom}>Makers </div>
     </div>
   );
 };
