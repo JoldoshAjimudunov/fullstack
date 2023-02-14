@@ -4,14 +4,14 @@
   align-items: center;
   height: 84px;
 }
-.cart__item {
-  /* padding: 0;
-  margin: 0; */
-}
+/* .cart__item {
+  padding: 0;
+  margin: 0;
+} */
 .cart__title {
   width: 120px;
 }
-.cart__img {
-  /* padding-left: 30px;
-  padding-top: 30px; */
-}
+/* .cart__img {
+  padding-left: 30px;
+  padding-top: 30px;
+} */

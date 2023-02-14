@@ -7,7 +7,7 @@ import CartItem from "./CartItem";
 import cl from "./Cart.module.css";
 
 const Cart = () => {
-  const { cart, getCart, clearCart } = useCart();
+  const { cart, getCart, clearCart, credit } = useCart();
   useEffect(() => {
     getCart();
   }, []);
@@ -42,7 +42,7 @@ const Cart = () => {
             justifyContent: "center",
           }}
           variant="outlined"
-          onClick={clearCart}
+          onClick={credit}
         >
           BUY
         </Button>

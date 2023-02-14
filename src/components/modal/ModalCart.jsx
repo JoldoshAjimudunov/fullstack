@@ -6,7 +6,11 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Cart from "../cart/Cart";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useNavigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 // import React from "react";
+import AddCardIcon from "@mui/icons-material/AddCard";
+import cl from "../CreditCard/CredCard.module.css";
 const style = {
   position: "absolute",
   top: "50%",
@@ -20,15 +24,22 @@ const style = {
 };
 
 const ModalCart = () => {
+  const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
     <div>
-      <Button onClick={handleOpen}>
-        <ShoppingCartIcon sx={{ fontSize: 40 }} />
-      </Button>
+      <div className={cl.navb__it}>
+        <Button onClick={handleOpen}>
+          <ShoppingCartIcon sx={{ fontSize: 40 }} />
+        </Button>
+
+        <AddCardIcon sx={{ fontSize: 40 }} onClick={() => navigate("/credit")}>
+          card
+        </AddCardIcon>
+      </div>
       <Modal
         open={open}
         onClose={handleClose}

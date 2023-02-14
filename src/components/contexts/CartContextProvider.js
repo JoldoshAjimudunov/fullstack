@@ -1,5 +1,6 @@
 import { elementAcceptingRef } from "@mui/utils";
 import React, { createContext, useContext, useReducer } from "react";
+import { useNavigate } from "react-router-dom";
 import { calcSubPrice, calcTotalPrice } from "../../helpers/functions";
 // import { calcSubPrice, calcTotalPrice } from ;
 
@@ -21,6 +22,7 @@ function reducer(state = INIT_STATE, action) {
 }
 
 const CartContextProvider = ({ children }) => {
+  const navigate = useNavigate();
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   const getCart = () => {
@@ -133,6 +135,10 @@ const CartContextProvider = ({ children }) => {
     getCart();
   }
 
+  function credit() {
+    navigate("/credit");
+  }
+
   let value = {
     cart: state.cart,
 
@@ -142,6 +148,7 @@ const CartContextProvider = ({ children }) => {
     deleteCartProduct,
     checkProductInCart,
     clearCart,
+    credit,
   };
   return <cartContext.Provider value={value}>{children}</cartContext.Provider>;
 };

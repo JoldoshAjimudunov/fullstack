@@ -25,6 +25,24 @@ const Footer = () => {
                 Коммерческие предложения - makers.com@mail.ru
               </li>
             </ul>
+            <div>
+              <img
+                className={cl.logos}
+                src="https://cdn-icons-png.flaticon.com/512/5968/5968940.png"
+                alt="t"
+              />
+              <img
+                className={cl.logos}
+                src="https://www.iconpacks.net/icons/1/free-whatsapp-icon-121-thumb.png"
+                alt="t"
+              />
+
+              <img
+                className={cl.logos}
+                src="https://cdn-icons-png.flaticon.com/512/87/87390.png"
+                alt="t"
+              />
+            </div>
           </div>
         </div>
         <div>
