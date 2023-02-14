@@ -1,7 +1,7 @@
 import { Button, CardMedia, Grid, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
-import { useCart } from "../contexts/CartContextProvider";
+import { useCart } from "../Contexts/CartContextProvider";
 import cl from "./Cart.module.css";
 import CloseIcon from "@mui/icons-material/Close";
 

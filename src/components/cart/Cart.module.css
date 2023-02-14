@@ -20,16 +20,16 @@
   margin-bottom: -20px;
 }
 .del__btn {
-  backgroundcolor: white;
+  background-color: white;
   color: black;
-  bordercolor: black;
+  border-color: black;
   border: solid;
   margin: 4px;
   width: 14px;
   height: 38px;
-  borderradius: 5px;
-  textalign: center;
-  fontsize: small;
+  border-radius: 5px;
+  text-align: center;
+  font-size: small;
   margin: 0 auto;
 }
 .del__btn:hover {

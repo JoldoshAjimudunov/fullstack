@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "./contexts/AuthContextProvider";
+import { useAuth } from "./Contexts/AuthContextProvider";
 // import { useProduct } from "./Contexts/ProductContextProvider";
 import "../components/Navbar.css";
 import { MenuItem } from "@mui/material";
@@ -84,12 +84,17 @@ function Navbar() {
           {user ? (
             <>
               <li>
+                <a class="menu__item" href="#" onClick={() => navigate("/")}>
+                  Главная
+                </a>
+              </li>
+              <li>
                 <a
                   class="menu__item"
                   href="#"
                   onClick={() => navigate("/products")}
                 >
-                  Products
+                  Меню
                 </a>
               </li>
               <li>
@@ -98,12 +103,12 @@ function Navbar() {
                   href="#"
                   onClick={() => navigate("/admin")}
                 >
-                  Admin Add product
+                  Добавить Продукт{" "}
                 </a>
               </li>
               <li>
                 <a class="menu__item" href="#" onClick={() => logout()}>
-                  logout
+                  Выйти
                 </a>
               </li>
               <div className="text">
@@ -114,12 +119,17 @@ function Navbar() {
             <>
               {" "}
               <li>
+                <a class="menu__item" href="#" onClick={() => navigate("/")}>
+                  Главная
+                </a>
+              </li>
+              <li>
                 <a
                   class="menu__item"
                   href="#"
                   onClick={() => navigate("/products")}
                 >
-                  Products
+                  Меню
                 </a>
               </li>
               <li>
@@ -128,7 +138,7 @@ function Navbar() {
                   href="#"
                   onClick={() => navigate("/login")}
                 >
-                  Login
+                  Войти
                 </a>
               </li>
               <li>
@@ -137,7 +147,7 @@ function Navbar() {
                   href="#"
                   onClick={() => navigate("/register")}
                 >
-                  Register
+                  Регистрация
                 </a>
               </li>
               <li>

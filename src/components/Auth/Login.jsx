@@ -3,7 +3,7 @@ import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import { Link as RouterLink } from "react-router-dom";
 // import { Alert } from "@mui/material";
-import { useAuth } from "../contexts/AuthContextProvider";
+import { useAuth } from "../Contexts/AuthContextProvider";
 import { useState } from "react";
 import "../Auth/Auth.css";
 import { createTheme } from "@mui/material";
@@ -33,11 +33,13 @@ export default function Login() {
 
   const [password, setPassword] = useState("");
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     if (!email.trim() || !password.trim()) {
       alert("Заполните поля!");
       return;
     }
+
+    e.preventDefault();
 
     let formData = new FormData();
     formData.append("email", email);
@@ -48,7 +50,7 @@ export default function Login() {
   return (
     <div class="header" theme={theme}>
       <div class="container">
-        <form action="" method="POST" class="form">
+        <form class="form">
           <h1>Login</h1>
 
           <img

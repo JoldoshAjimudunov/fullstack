@@ -6,9 +6,9 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import axios from "axios";
 import { API_PRODUCTS } from "../../const";
-import { productContext } from "../contexts/ProductContextProvider";
+import { productContext } from "../Contexts/ProductContextProvider";
 import { Link } from "react-router-dom";
-import { useCart } from "../contexts/CartContextProvider";
+import { useCart } from "../Contexts/CartContextProvider";
 
 export default function MyCard({ product }) {
   const { deleteProduct } = React.useContext(productContext);

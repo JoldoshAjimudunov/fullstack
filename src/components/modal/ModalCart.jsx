@@ -32,21 +32,11 @@ const ModalCart = () => {
   return (
     <div>
       <div className={cl.navb__it}>
-        {/* /////////// */}
-        {/* <Button onClick={handleOpen}>
-          <ShoppingCartIcon sx={{ fontSize: 40 }} />
-        </Button> */}
-
-        {/* <AddCardIcon sx={{ fontSize: 40 }} onClick={() => navigate("/credit")}>
-          card
-        </AddCardIcon> */}
-
-        {/* /////////////// */}
         <a class="menu__item" onClick={handleOpen}>
-          Shop Cart
+          Корзина
         </a>
         <a class="menu__item" onClick={() => navigate("/credit")}>
-          Credit Card
+          Способ оплаты
         </a>
       </div>
       <Modal

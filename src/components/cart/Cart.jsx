@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useEffect, useState } from "react";
-import { useCart } from "../contexts/CartContextProvider";
+import { useCart } from "../Contexts/CartContextProvider";
 // import NavbarProd from "../NavbarProd";
 import CartItem from "./CartItem";
 import cl from "./Cart.module.css";
@@ -23,8 +23,21 @@ const Cart = () => {
           }
         })}
       </div>
-      <Container>
-        <Button className={cl.buy__btn} variant="outlined" onClick={credit}>
+      <Container centered>
+        <Button
+          style={{
+            "background-color": "rgb(77, 42, 0)",
+            color: "white",
+            borderColor: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            direction: "column",
+          }}
+          className={cl.buy__btn}
+          variant="outlined"
+          onClick={credit}
+        >
           BUY
         </Button>
         <Typography

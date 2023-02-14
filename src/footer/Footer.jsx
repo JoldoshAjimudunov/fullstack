@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <ul className={cl.cont__item}>
               <li className={cl.item__text}>
-                Lorem ipsum dolor sit amet consectetur.
+                191028 Манежный пер.2 ,Санкт-Петербург
               </li>
               <li className={cl.item__text}>Время работы : 12:00-23:00</li>
               <li className={cl.item__text}>Телефон: +7 (969) 711-24-24</li>

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../footer/Footer";
-import { productContext } from "../contexts/ProductContextProvider";
+import { productContext } from "../Contexts/ProductContextProvider";
 import MyCard from "./MyCard";
 
 const ProductList = () => {

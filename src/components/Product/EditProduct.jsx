@@ -1,7 +1,7 @@
 import { Box, Button, TextField } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { productContext } from "../contexts/ProductContextProvider";
+import { productContext } from "../Contexts/ProductContextProvider";
 
 const EditProduct = () => {
   const { getOneProduct, editProduct, oneProduct } = useContext(productContext);

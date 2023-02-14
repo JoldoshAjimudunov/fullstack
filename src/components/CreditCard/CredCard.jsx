@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../footer/Footer";
 import cl from "./CredCard.module.css";
 
 const CredCard = () => {
@@ -88,6 +89,7 @@ const CredCard = () => {
           </div>
         </div>
       </body>
+      <Footer />
     </div>
   );
 };
