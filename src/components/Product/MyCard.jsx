@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import axios from "axios";
 import { API_PRODUCTS } from "../../const";
-import { productContext } from "../context/ProductContextProvider";
+import { productContext } from "../Contexts/ProductContextProvider";
 import { Link } from "react-router-dom";
 
 export default function MyCard({ product }) {

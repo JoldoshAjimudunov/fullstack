@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { productContext } from "../context/ProductContextProvider";
+import { productContext } from "../Contexts/ProductContextProvider";
 import MyCard from "./MyCard";
 
 const ProductList = () => {

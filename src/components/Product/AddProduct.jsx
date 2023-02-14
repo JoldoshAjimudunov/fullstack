@@ -1,6 +1,6 @@
 import { Box, Button, TextField } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
-import { productContext } from "../context/ProductContextProvider";
+import { productContext } from "../Contexts/ProductContextProvider";
 
 const AddProduct = () => {
   const { addProducts } = useContext(productContext);
