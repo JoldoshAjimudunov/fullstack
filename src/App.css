@@ -1,3 +1,13 @@
 .App {
   text-align: center;
 }
+
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://priroda.club/uploads/posts/2022-02/1643850443_46-priroda-club-p-kafe-u-morya-priroda-krasivo-foto-49.jpg");
+  background-size: cover;
+}
