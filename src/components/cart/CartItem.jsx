@@ -3,6 +3,7 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { useCart } from "../contexts/CartContextProvider";
 import cl from "./Cart.module.css";
+import CloseIcon from "@mui/icons-material/Close";
 
 const CartItem = ({ item }) => {
   const { changeProductCount, deleteCartProduct } = useCart();
@@ -16,7 +17,7 @@ const CartItem = ({ item }) => {
             height: 50,
             width: 50,
           }}
-          src={item.item.img}
+          src={item.item.image}
           alt={item.item.title}
         />
       </Grid>
@@ -49,14 +50,15 @@ const CartItem = ({ item }) => {
           Price: {item.item.price}$
         </Typography>
       </Grid>
-      <Grid>
+      <Grid item>
         <Typography
           className={cl.cart__item}
           variant="p"
           color="text.secondary"
         >
-          {" "}
+          {/* {" "} */}
           <input
+            className={cl.cart__input}
             type="number"
             value={item.count}
             onChange={(e) => changeProductCount(e.target.value, item.item.id)}
@@ -65,35 +67,14 @@ const CartItem = ({ item }) => {
           ></input>
         </Typography>
       </Grid>
-      {/* <Grid item>
-        <Typography
-          className={cl.cart__item}
-          variant="p"
-          color="text.secondary"
-        >
-          SubPrice: {item.subPrice}$
-        </Typography>
-      </Grid> */}
       <Grid>
         <Button
-          style={{
-            backgroundColor: "#eb5349",
-            color: "white",
-            borderColor: "white",
-            border: "none",
-            margin: "4px",
-            width: "80px",
-            height: "25px",
-            borderRadius: "5px",
-            textAlign: "center",
-            fontSize: "small",
-            margin: "0 auto",
-          }}
+          className={cl.del__btn}
           variant="outlined"
           size="small"
           onClick={() => deleteCartProduct(item.item.id)}
         >
-          Remove
+          <CloseIcon />
         </Button>
       </Grid>
     </Grid>

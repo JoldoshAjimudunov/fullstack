@@ -2,19 +2,22 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import CartContextProvider from "./components/contexts/CartContextProvider";
 import { BrowserRouter } from "react-router-dom";
+import AuthContextProvider from "./components/contexts/AuthContextProvider";
+import ProductContextProvider from "./components/contexts/ProductContextProvider";
+import CartContextProvider from "./components/contexts/CartContextProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <CartContextProvider>
-        <App />
-      </CartContextProvider>
+      <AuthContextProvider>
+        <ProductContextProvider>
+          <CartContextProvider>
+            <App />
+          </CartContextProvider>
+        </ProductContextProvider>
+      </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
-
-reportWebVitals();

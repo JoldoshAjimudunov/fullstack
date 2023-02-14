@@ -3,7 +3,7 @@ import cl from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div>
+    <div className={cl.footer_cont}>
       <h2 className={cl.title}>Контакты</h2>
       <hr />
       <div className={cl.map_cont}>
@@ -74,7 +74,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={cl.bottom}>Makers </div>
+      <div className={cl.bottom__box}>
+        <div className={cl.bottom}>Makers </div>
+      </div>
     </div>
   );
 };

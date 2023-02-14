@@ -24,26 +24,7 @@ const Cart = () => {
         })}
       </div>
       <Container>
-        <Button
-          style={{
-            display: "flex",
-            backgroundColor: "rgb(14, 210, 0)",
-            color: "white",
-            borderColor: "white",
-            border: "none",
-            margin: "4px",
-            width: "200px",
-            height: "25px",
-            borderRadius: "10px",
-            textAlign: "center",
-            fontSize: "large",
-            margin: "0 auto",
-            padding: "10px 10px",
-            justifyContent: "center",
-          }}
-          variant="outlined"
-          onClick={credit}
-        >
+        <Button className={cl.buy__btn} variant="outlined" onClick={credit}>
           BUY
         </Button>
         <Typography

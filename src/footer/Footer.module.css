@@ -16,13 +16,16 @@
 .title {
   display: flex;
   justify-content: start;
-  margin-left: 100px;
+  margin-left: 190px;
+  margin-bottom: 20px;
+  font-size: 30px;
 }
 /* .cont__item {
   
 } */
 .item__text {
   text-align: start;
+  margin-top: 10px;
 }
 
 .bottom {
@@ -31,11 +34,22 @@
   background-color: rgb(26, 26, 26);
   color: white;
   text-align: center;
-  padding-top: 50px;
+  /* padding-top: 50px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .logos {
   width: 50px;
   /* padding-left: 15px;
   padding-top: 10px; */
   padding: 10px 0px 0px 25px;
+}
+.footer_cont {
+  margin-top: 100px;
+}
+.bottom__box {
+  display: flex;
+  flex-wrap: wrap;
 }
