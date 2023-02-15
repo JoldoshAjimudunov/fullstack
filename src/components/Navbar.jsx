@@ -74,17 +74,17 @@ function Navbar() {
           ))}
         </Menu>
       </Box>
-      <div class="hamburger-menu">
+      <div className="hamburger-menu">
         <input id="menu__toggle" type="checkbox" />
-        <label class="menu__btn" for="menu__toggle">
+        <label className="menu__btn" for="menu__toggle">
           <span></span>
         </label>
-        <ul class="menu__box">
+        <ul className="menu__box">
           {user ? (
             <>
               <li>
                 <a
-                  class="menu__item"
+                  className="menu__item"
                   href="#"
                   onClick={() => navigate("/products")}
                 >
@@ -93,7 +93,7 @@ function Navbar() {
               </li>
               <li>
                 <a
-                  class="menu__item"
+                  className="menu__item"
                   href="#"
                   onClick={() => navigate("/admin")}
                 >
@@ -101,7 +101,7 @@ function Navbar() {
                 </a>
               </li>
               <li>
-                <a class="menu__item" href="#" onClick={() => logout()}>
+                <a className="menu__item" href="#" onClick={() => logout()}>
                   logout
                 </a>
               </li>
@@ -114,7 +114,7 @@ function Navbar() {
               {" "}
               <li>
                 <a
-                  class="menu__item"
+                  className="menu__item"
                   href="#"
                   onClick={() => navigate("/products")}
                 >
@@ -123,7 +123,7 @@ function Navbar() {
               </li>
               <li>
                 <a
-                  class="menu__item"
+                  className="menu__item"
                   href="#"
                   onClick={() => navigate("/login")}
                 >
@@ -132,7 +132,7 @@ function Navbar() {
               </li>
               <li>
                 <a
-                  class="menu__item"
+                  className="menu__item"
                   href="#"
                   onClick={() => navigate("/register")}
                 >

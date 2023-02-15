@@ -46,9 +46,9 @@ export default function Login() {
   };
 
   return (
-    <div class="header" theme={theme}>
-      <div class="container">
-        <form action="" method="POST" class="form">
+    <div className="header" theme={theme}>
+      <div className="container">
+        <form action="" method="POST" className="form">
           <h1>Login</h1>
 
           <img
@@ -56,8 +56,8 @@ export default function Login() {
             width="120"
             height="120"
           />
-          <div class="input">
-            <label for="email" id="email_label" class="label">
+          <div className="input">
+            <label for="email" id="email_label" className="label">
               Email
             </label>
             <input
@@ -72,12 +72,12 @@ export default function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               type="email"
-              class="form-input"
+              className="form-input"
               placeholder="Email"
             />
           </div>
-          <div class="input">
-            <label for="password" id="email_label" class="label">
+          <div className="input">
+            <label for="password" id="email_label" className="label">
               Password
             </label>
             <input
@@ -91,7 +91,7 @@ export default function Login() {
               autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              class="form-input"
+              className="form-input"
               placeholder="Password"
             />
           </div>

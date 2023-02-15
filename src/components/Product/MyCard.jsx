@@ -13,7 +13,7 @@ export default function MyCard({ product }) {
   const { deleteProduct } = React.useContext(productContext);
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, margin: "3%" }}>
       <CardActionArea>
         <CardMedia
           component="img"

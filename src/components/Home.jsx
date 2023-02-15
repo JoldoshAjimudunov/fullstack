@@ -1,15 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../components/Home.css";
+import MainPage from "./page/MainPage";
 
 const Home = () => {
   return (
     <>
-      <div class="tn-atom" field="tn_text_1470209944682">
+      <div className="header">
+        TEMA
+        <Link to="/products">
+          <button>menu</button>
+        </Link>
+      </div>
+      <div className="tn-atom" field="tn_text_1470209944682">
         О РЕСТОРАНЕ
       </div>
       <br></br>
-      <div class="bl"></div>
-      <div class="all">
+      <div className="bl"></div>
+      <div className="all">
         <input checked type="radio" name="respond" id="desktop" />
         <article id="slider">
           <input checked type="radio" name="slider" id="switch1" />
@@ -19,7 +27,7 @@ const Home = () => {
           <input type="radio" name="slider" id="switch5" />
           <div id="slides">
             <div id="overflow">
-              <div class="image">
+              <div className="image">
                 <article>
                   <img src="https://roomester.ru/wp-content/uploads/2019/06/dizajn-restorana2.jpg" />
                 </article>
