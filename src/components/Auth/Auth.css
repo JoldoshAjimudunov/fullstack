@@ -6,9 +6,12 @@
   font-weight: 400;
 }
 .container {
+  width: 40%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   margin-bottom: 8vh;
+  flex-direction: column;
 }
 p {
   text-align: center;
@@ -36,6 +39,9 @@ p {
   color: #ffff;
 }
 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #fff;
   height: auto;
   color: #000;
@@ -60,9 +66,14 @@ form {
   background-color: transparent;
   margin: 15px;
 }
+
+.label {
+  margin-bottom: -10px;
+}
+
 .input:focus-within .label,
 .form-input:not(:placeholder-shown) + .label {
-  transform: translate(0, -12px) scale(0.8);
+  transform: translate(0, -2px) scale(0.8);
   color: #588ce0;
 }
 .input:focus-within #email,
