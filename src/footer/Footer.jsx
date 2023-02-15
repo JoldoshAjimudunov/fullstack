@@ -4,24 +4,39 @@ import cl from "./Footer.module.css";
 const Footer = () => {
   return (
     <div className={cl.footer_cont}>
-      <h2 className={cl.title}>Контакты</h2>
-      <hr />
+      <h2
+        style={{
+          display: "flex",
+          marginLeft: "12%",
+          fontSize: "50px",
+          color: "white",
+        }}
+      >
+        Контакты
+      </h2>
+      <hr style={{ width: "70%", color: "white", marginLeft: "11%" }} />
       <div className={cl.map_cont}>
         <div className={cl.map__left}>
           <div>
             <ul className={cl.cont__item}>
-              <li className={cl.item__text}>
+              <li className={cl.item__text} style={{ color: "white" }}>
                 191028 Манежный пер.2 ,Санкт-Петербург
               </li>
-              <li className={cl.item__text}>Время работы : 12:00-23:00</li>
-              <li className={cl.item__text}>Телефон: +7 (969) 711-24-24</li>
-              <li className={cl.item__text}>Резерв: Yclients</li>
+              <li className={cl.item__text} style={{ color: "white" }}>
+                Время работы : 12:00-23:00
+              </li>
+              <li className={cl.item__text} style={{ color: "white" }}>
+                Телефон: +7 (969) 711-24-24
+              </li>
+              <li className={cl.item__text} style={{ color: "white" }}>
+                Резерв: Yclients
+              </li>
             </ul>
             <ul>
-              <li className={cl.item__text}>
+              <li className={cl.item__text} style={{ color: "white" }}>
                 Присоединиться к нам - makers@gmail.com
               </li>
-              <li className={cl.item__text}>
+              <li className={cl.item__text} style={{ color: "white" }}>
                 Коммерческие предложения - makers.com@mail.ru
               </li>
             </ul>
@@ -49,7 +64,8 @@ const Footer = () => {
           <div class="mapouter">
             <div class="gmap_canvas">
               <iframe
-                width="600"
+                className="mapgoogle"
+                width="100%"
                 height="400"
                 id="gmap_canvas"
                 src="https://maps.google.com/maps?q=munchen&t=&z=10&ie=UTF8&iwloc=&output=embed"
