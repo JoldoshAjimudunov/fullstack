@@ -7,6 +7,7 @@ import AddProduct from "./components/Product/AddProduct";
 import EditProduct from "./components/Product/EditProduct";
 import ProductList from "./components/Product/ProductList.jsx";
 import CreditCardPage from "./pages/CreditCardPage";
+import MenuList from "./pages/MenuList";
 
 const MainRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const MainRoutes = () => {
       <Route path="/admin" element={<AddProduct />} />
       <Route path="credit" element={<CreditCardPage />} />
       <Route path="/edit/:id" element={<EditProduct />} />
+      <Route path="/menulist" element={<MenuList />} />
     </Routes>
   );
 };

@@ -23,16 +23,13 @@ const Cart = () => {
           }
         })}
       </div>
-      <Container centered>
+      <Container sx={{ pl: "40" }} centered>
         <Button
           style={{
             "background-color": "rgb(77, 42, 0)",
             color: "white",
             borderColor: "white",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            direction: "column",
+            margin: "0",
           }}
           className={cl.buy__btn}
           variant="outlined"

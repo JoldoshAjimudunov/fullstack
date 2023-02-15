@@ -130,10 +130,10 @@ const CartContextProvider = ({ children }) => {
     }
   }
 
-  function clearCart() {
-    localStorage.clear();
-    getCart();
-  }
+  // function clearCart() {
+  //   localStorage.clear();
+  //   getCart();
+  // }
 
   function credit() {
     navigate("/credit");
@@ -147,7 +147,7 @@ const CartContextProvider = ({ children }) => {
     changeProductCount,
     deleteCartProduct,
     checkProductInCart,
-    clearCart,
+    // clearCart,
     credit,
   };
   return <cartContext.Provider value={value}>{children}</cartContext.Provider>;

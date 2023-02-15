@@ -69,6 +69,7 @@ const CartItem = ({ item }) => {
       </Grid>
       <Grid>
         <Button
+          style={{ color: "black", borderColor: "black" }}
           className={cl.del__btn}
           variant="outlined"
           size="small"

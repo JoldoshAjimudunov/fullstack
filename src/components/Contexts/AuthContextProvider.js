@@ -75,7 +75,6 @@ const AuthContextProvider = ({ children }) => {
   let value = {
     user,
     error,
-
     register,
     login,
     logout,
