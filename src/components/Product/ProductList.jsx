@@ -62,16 +62,17 @@ const ProductList = () => {
         </div>
       </div>
       {/* ///////////////////////////// */}
-      <div>
-        <div style={{ marginTop: "32px" }}>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ marginTop: "32px", width: "1200px" }}>
           <RadioGroup
             style={{
               display: "flex",
               flexDirection: "row",
               margin: "0 auto",
-              width: "1200px",
+              // width: "1200px",
               textAlign: "center",
               justifyContent: "space-evenly",
+              flexWrap: "wrap",
             }}
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="all"
