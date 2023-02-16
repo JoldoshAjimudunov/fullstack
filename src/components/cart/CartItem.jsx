@@ -9,7 +9,13 @@ const CartItem = ({ item }) => {
   const { changeProductCount, deleteCartProduct } = useCart();
 
   return (
-    <Grid className={cl.cart__cont} container spacing={2} alignItems="center">
+    <Grid
+      className={cl.cart__cont}
+      container
+      spacing={2}
+      alignItems="center"
+      style={{ borderRadius: "20px" }}
+    >
       <Grid className={cl.cart__img}>
         <Box
           component="img"

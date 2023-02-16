@@ -6,6 +6,7 @@ import { Link as RouterLink } from "react-router-dom";
 // import { Alert } from "@mui/material";
 import { useAuth } from "../Contexts/AuthContextProvider";
 import { useState } from "react";
+// import "../Auth/Auth.css";
 
 function Copyright(props) {
   return (
@@ -52,7 +53,7 @@ export default function Register() {
     <div class="header" theme={theme}>
       <div class="container">
         <form class="form">
-          <h1>Login</h1>
+          <h1>Register</h1>
 
           <img
             src="https://i.ibb.co/bvqgKnm/account.png"

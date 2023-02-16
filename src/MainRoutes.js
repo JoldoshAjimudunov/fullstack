@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
-import Home from "./components/Home";
+import Home from "./components/Home/Home";
 import AddProduct from "./components/Product/AddProduct";
 import EditProduct from "./components/Product/EditProduct";
 import ProductList from "./components/Product/ProductList.jsx";

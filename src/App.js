@@ -1,6 +1,6 @@
 import ModalCart from "./components/modal/ModalCart";
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import MainRoutes from "./MainRoutes";
 
 function App() {
