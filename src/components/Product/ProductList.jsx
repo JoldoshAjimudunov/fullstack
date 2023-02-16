@@ -1,4 +1,12 @@
-import { Box, Pagination, TextField } from "@mui/material";
+import {
+  Box,
+  FormControlLabel,
+  Pagination,
+  Radio,
+  RadioGroup,
+  TextField,
+} from "@mui/material";
+import { createTheme } from "@mui/system";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import Footer from "../../footer/Footer";
@@ -7,7 +15,8 @@ import Navbar from "../Navbar/Navbar";
 import MyCard from "./MyCard";
 
 const ProductList = () => {
-  const { getProducts, products, pages } = useContext(productContext);
+  const { getProducts, products, fetchByParams, pages } =
+    useContext(productContext);
   const [searchParams, setSearchParams] = useSearchParams();
   const [value, setValue] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -70,6 +79,54 @@ const ProductList = () => {
           </Link>
         </div>
       </div>
+      {/* ///////////////////////////// */}
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ marginTop: "32px", width: "1200px" }}>
+          <RadioGroup
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              margin: "0 auto",
+              // width: "1200px",
+              textAlign: "center",
+              justifyContent: "space-evenly",
+              flexWrap: "wrap",
+            }}
+            aria-labelledby="demo-radio-buttons-group-label"
+            defaultValue="all"
+            // onChange={(e) => fetchByParams("type", e.target.value)}
+            onChange={(e) => fetchByParams("category", e.target.value)}
+            name="radio-buttons-group"
+          >
+            <FormControlLabel
+              sx={{ width: "120px", fontSize: "2rem" }}
+              value="all"
+              control={<Radio color="default" />}
+              label="все"
+            />
+            <FormControlLabel
+              sx={{ width: "120px" }}
+              value="ff"
+              control={<Radio color="default" />}
+              label="фаст-фуд"
+            />
+            <FormControlLabel
+              sx={{ width: "120px" }}
+              value="soda"
+              control={<Radio color="default" />}
+              label="напитки"
+            />
+
+            <FormControlLabel
+              sx={{ width: "120px" }}
+              value="noodle"
+              control={<Radio color="default" />}
+              label="лапша"
+            />
+          </RadioGroup>
+        </div>
+      </div>
+      {/* ///////////////////////////// */}
 
       <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         {currentData().map((product, index) => (

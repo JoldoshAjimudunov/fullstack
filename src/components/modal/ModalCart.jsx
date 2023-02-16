@@ -38,6 +38,9 @@ const ModalCart = () => {
         <a class="menu__item" onClick={() => navigate("/credit")}>
           Способ оплаты
         </a>
+        <a class="menu__item" onClick={() => navigate("/menulist")}>
+          меню и сет
+        </a>
       </div>
       <Modal
         open={open}
