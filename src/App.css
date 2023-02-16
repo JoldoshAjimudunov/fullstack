@@ -17,11 +17,10 @@
   background-repeat: no-repeat;
 }
 
-.btnMenu {
+/* .btnMenu {
   /* font-size: 100px; */
-}
-
-.header-list {
+/* } */
+*/ .header-list {
   display: flex;
   width: 1000px;
   justify-content: space-between;
