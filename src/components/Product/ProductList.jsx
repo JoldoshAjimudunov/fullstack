@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import Footer from "../../footer/Footer";
 import { productContext } from "../Contexts/ProductContextProvider";
-import Navbar from "../Navbar";
+import Navbar from "../Navbar/Navbar";
 import MyCard from "./MyCard";
 
 const ProductList = () => {

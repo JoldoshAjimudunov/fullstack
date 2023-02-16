@@ -15,20 +15,20 @@ const Cart = () => {
   return (
     <>
       {/* <NavbarProd /> */}
-      <h1 style={{ textAlign: "center" }}>My Cart</h1>
-      <div className={cl.cart}>
+      <h2 style={{ textAlign: "center" }}>My Cart</h2>
+      <div>
         {cart?.products.map((cartItem) => {
           {
             return <CartItem item={cartItem} key={cartItem.item.id} />;
           }
         })}
       </div>
-      <Container centered>
+      <Container centered style={{ color: "red" }}>
         <Button
           style={{
             "background-color": "rgb(77, 42, 0)",
+            borderRadius: "10px",
             color: "white",
-            borderColor: "white",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

@@ -1,10 +1,10 @@
 /* .App {
   text-align: center;
 } */
-.navb__it {
+/* .navb__it {
   display: flex;
   align-items: center;
-}
+} */
 
 .header-navbar {
   height: 100vh;
@@ -20,7 +20,7 @@
 /* .btnMenu {
   /* font-size: 100px; */
 /* } */
-*/ .header-list {
+.header-list {
   display: flex;
   width: 1000px;
   justify-content: space-between;

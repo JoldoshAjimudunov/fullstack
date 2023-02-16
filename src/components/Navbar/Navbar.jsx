@@ -5,11 +5,11 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "./Contexts/AuthContextProvider";
+import { useAuth } from "../Contexts/AuthContextProvider";
 // import { useProduct } from "./Contexts/ProductContextProvider";
-import "../components/Navbar.css";
+import "../Navbar/Navbar.css";
 import { MenuItem } from "@mui/material";
-import ModalCart from "./modal/ModalCart";
+import ModalCart from "../modal/ModalCart";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
