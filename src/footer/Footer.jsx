@@ -9,7 +9,7 @@ const Footer = () => {
           display: "flex",
           marginLeft: "12%",
           fontSize: "50px",
-          color: "white",
+          color: "rgb(184, 184, 184)",
         }}
       >
         Контакты
@@ -19,24 +19,18 @@ const Footer = () => {
         <div className={cl.map__left}>
           <div>
             <ul className={cl.cont__item}>
-              <li className={cl.item__text} style={{ color: "white" }}>
+              <li className={cl.item__text}>
                 191028 Манежный пер.2 ,Санкт-Петербург
               </li>
-              <li className={cl.item__text} style={{ color: "white" }}>
-                Время работы : 12:00-23:00
-              </li>
-              <li className={cl.item__text} style={{ color: "white" }}>
-                Телефон: +7 (969) 711-24-24
-              </li>
-              <li className={cl.item__text} style={{ color: "white" }}>
-                Резерв: Yclients
-              </li>
+              <li className={cl.item__text}>Время работы : 12:00-23:00</li>
+              <li className={cl.item__text}>Телефон: +7 (969) 711-24-24</li>
+              <li className={cl.item__text}>Резерв: Yclients</li>
             </ul>
             <ul>
-              <li className={cl.item__text} style={{ color: "white" }}>
+              <li className={cl.item__text}>
                 Присоединиться к нам - makers@gmail.com
               </li>
-              <li className={cl.item__text} style={{ color: "white" }}>
+              <li className={cl.item__text}>
                 Коммерческие предложения - makers.com@mail.ru
               </li>
             </ul>
