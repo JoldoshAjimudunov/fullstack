@@ -6,14 +6,14 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import axios from "axios";
 import { API_PRODUCTS } from "../../const";
-import { productContext } from "../context/ProductContextProvider";
 import { Link } from "react-router-dom";
+import { productContext } from "../Contexts/ProductContextProvider";
 
 export default function MyCard({ product }) {
   const { deleteProduct } = React.useContext(productContext);
 
   return (
-    <Card sx={{ maxWidth: 345, margin: "3%" }}>
+    <Card sx={{ width: 345, margin: "3%" }}>
       <CardActionArea>
         <CardMedia
           component="img"

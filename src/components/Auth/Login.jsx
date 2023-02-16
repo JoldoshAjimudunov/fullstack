@@ -33,11 +33,13 @@ export default function Login() {
 
   const [password, setPassword] = useState("");
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     if (!email.trim() || !password.trim()) {
       alert("Заполните поля!");
       return;
     }
+
+    e.preventDefault();
 
     let formData = new FormData();
     formData.append("email", email);
@@ -46,9 +48,9 @@ export default function Login() {
   };
 
   return (
-    <div className="header" theme={theme}>
-      <div className="container">
-        <form action="" method="POST" className="form">
+    <div class="header" theme={theme}>
+      <div class="container">
+        <form class="form">
           <h1>Login</h1>
 
           <img

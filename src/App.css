@@ -1,15 +1,24 @@
-.App {
+/* .App {
   text-align: center;
+} */
+.navb__it {
+  display: flex;
+  align-items: center;
 }
 
-.header {
+.header-navbar {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("https://priroda.club/uploads/posts/2022-02/1643850443_46-priroda-club-p-kafe-u-morya-priroda-krasivo-foto-49.jpg");
+  background-image: url("https://i.siteapi.org/X19bQ4X8BHRIRsnYjzgD5hz9TGM=/fit-in/2000x/center/top/095a57e775e641a.s2.siteapi.org/img/3sgvz9p2mois88cwccgw4woo4ososc");
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btnMenu {
+  /* font-size: 100px; */
 }
 
 .header-list {
@@ -21,17 +30,18 @@
 
 .menu-text {
   font-size: 80px;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .oplata {
   display: flex;
   align-items: center;
-  padding-top: 118px;
+  padding-top: 58px;
 }
 
 .hr-header {
-  margin-top: -66px;
+  margin-top: 1px;
+  margin-left: 200px;
   padding-top: 0px;
   width: 1129px;
 }
@@ -39,5 +49,21 @@
 .p-text {
   text-align: center;
   font-size: 70px;
-  font-weight: 200;
+  font-weight: 100;
+}
+
+.inp-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.addProduct {
+  color: #fff;
+}
+
+.btnAdd {
+  width: 130px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: rgb(34, 34, 57);
 }

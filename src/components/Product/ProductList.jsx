@@ -1,7 +1,9 @@
-import { TextField } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { productContext } from "../context/ProductContextProvider";
+import Footer from "../../footer/Footer";
+import { productContext } from "../Contexts/ProductContextProvider";
+import Navbar from "../Navbar";
 import MyCard from "./MyCard";
 
 const ProductList = () => {
@@ -22,12 +24,13 @@ const ProductList = () => {
   return (
     <div>
       <div>
+        <Navbar />
         <div className="header-list">
           <span>
             <h1 className="menu-text">Menu</h1>
           </span>
           <span>
-            <a href="#" className="oplata">
+            <a href="/credit" className="oplata">
               Перейти к оплате
             </a>
           </span>
@@ -38,55 +41,27 @@ const ProductList = () => {
           мы работаем для Вас <br />в режиме доставки с 12:00 до 22:30
         </p>
 
-        <div>
+        <div className="inp-btn">
           <input
             placeholder="Поиск"
-            style={{ width: "75ch", height: "20px", marginLeft: "400px" }}
+            style={{ width: "75ch", height: "20px" }}
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
+          <Link to="/create">
+            <button className="btnAdd">
+              <p className="addProduct">addProduct</p>
+            </button>
+          </Link>
         </div>
       </div>
-      {/* 1
-      
-      1
-      1
-      1
-      1
-      1
-      1
-      
-      1
-      1
-      1
-      1
-      1
-      
-      1
-      1
-      1
-      
-      1
-      1
-      1
-      1
-      1
-      1
-      1
-      1
-      1
-      
-      1
-      1
-      1*/}
-      <Link to="/create">
-        <button>addProduct</button>
-      </Link>
-      <div style={{ display: "flex" }}>
+
+      <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         {products.map((product, index) => (
           <MyCard product={product} getProducts={getProducts} key={index} />
         ))}
-      </div>
+      </Box>
+      <Footer />
     </div>
   );
 };
