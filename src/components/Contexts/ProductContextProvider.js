@@ -14,12 +14,17 @@ const INIT_STATE = {
   products: [],
   categories: [],
   oneProduct: {},
+  pages: 0,
 };
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "GET_PRODUCTS":
-      return { ...state, products: action.payload };
+      return {
+        ...state,
+        products: action.payload,
+        pages: Math.ceil(action.payload.count / 6),
+      };
     case "GET_CATEGORIES":
       return { ...state, categories: action.payload };
     case "GET_ONE_PRODUCT":
@@ -118,6 +123,7 @@ const ProductContextProvider = ({ children }) => {
   let value = {
     products: state.products,
     oneProduct: state.oneProduct,
+    pages: state.pages,
 
     getOneProduct,
     getProducts,

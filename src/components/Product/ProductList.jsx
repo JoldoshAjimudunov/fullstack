@@ -1,10 +1,12 @@
 import {
   Box,
   FormControlLabel,
+  Pagination,
   Radio,
   RadioGroup,
   TextField,
 } from "@mui/material";
+import { createTheme } from "@mui/system";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import Footer from "../../footer/Footer";
@@ -13,9 +15,19 @@ import Navbar from "../Navbar/Navbar";
 import MyCard from "./MyCard";
 
 const ProductList = () => {
-  const { getProducts, products, fetchByParams } = useContext(productContext);
+  const { getProducts, products, fetchByParams, pages } =
+    useContext(productContext);
   const [searchParams, setSearchParams] = useSearchParams();
   const [value, setValue] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const count = Math.ceil(products.length / 9);
+
+  function currentData() {
+    const begin = (currentPage - 1) * 9;
+    const end = begin + 9;
+    return products.slice(begin, end);
+  }
 
   useEffect(() => {
     getProducts();
@@ -26,6 +38,12 @@ const ProductList = () => {
       q: value,
     });
   }, [value]);
+
+  useEffect(() => {
+    setSearchParams({
+      page: currentPage,
+    });
+  }, [currentPage]);
 
   return (
     <div>
@@ -111,9 +129,18 @@ const ProductList = () => {
       {/* ///////////////////////////// */}
 
       <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-        {products.map((product, index) => (
+        {currentData().map((product, index) => (
           <MyCard product={product} getProducts={getProducts} key={index} />
         ))}
+      </Box>
+      <Box style={{ display: "flex", justifyContent: "center" }}>
+        <Pagination
+          count={count}
+          page={currentPage}
+          variant="outlined"
+          color="primary"
+          onChange={(e, p) => setCurrentPage(p)}
+        />
       </Box>
       <Footer />
     </div>

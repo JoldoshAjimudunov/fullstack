@@ -9,15 +9,7 @@
       "id": 1
     },
     {
-      "title": "pizza",
-      "description": "ff",
-      "price": "500",
-      "category": "ff",
-      "image": "https://www.rema.no/wordpress/wp-content/uploads/2022/05/REC-2020100-1600x1080.jpg",
-      "id": 2
-    },
-    {
-      "title": "pepsi",
+      "title": "pepsiii",
       "description": "soda",
       "price": "4154",
       "category": "soda",
@@ -39,6 +31,70 @@
       "category": "ff",
       "image": "https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,q_60,w_750/best-nyc-burger-phpm4xlPf",
       "id": 5
+    },
+    {
+      "title": "d",
+      "description": "f",
+      "price": "ff",
+      "category": "f",
+      "image": "f",
+      "id": 6
+    },
+    {
+      "title": "e",
+      "description": "e",
+      "price": "e",
+      "category": "ee",
+      "image": "e",
+      "id": 7
+    },
+    {
+      "title": "w",
+      "description": "w",
+      "price": "w",
+      "category": "w",
+      "image": "w",
+      "id": 8
+    },
+    {
+      "title": "q",
+      "description": "q",
+      "price": "q",
+      "category": "q",
+      "image": "q",
+      "id": 9
+    },
+    {
+      "title": "r",
+      "description": "r",
+      "price": "r",
+      "category": "rr",
+      "image": "r",
+      "id": 10
+    },
+    {
+      "title": "t",
+      "description": "t",
+      "price": "t",
+      "category": "t",
+      "image": "t",
+      "id": 11
+    },
+    {
+      "title": "y",
+      "description": "y",
+      "price": "y",
+      "category": "y",
+      "image": "y",
+      "id": 12
+    },
+    {
+      "title": "u",
+      "description": "u",
+      "price": "u",
+      "category": "u",
+      "image": "u",
+      "id": 13
     }
   ]
 }
