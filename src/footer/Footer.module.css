@@ -64,4 +64,17 @@
   .map {
     width: 400px;
   }
+  .title {
+    margin-left: 80px;
+  }
+  .item__text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .map {
+    width: 300px;
+    height: 300px;
+  }
 }
