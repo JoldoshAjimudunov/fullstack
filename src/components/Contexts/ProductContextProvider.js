@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { API_PRODUCTS } from "../../const";
 
 export const productContext = createContext();
@@ -27,15 +27,14 @@ const reducer = (state = INIT_STATE, action) => {
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
   const [error, setError] = useState([]);
-
+  const [search] = useSearchParams();
   // console.log(state);
 
   const navigate = useNavigate();
 
   async function getProducts() {
     try {
-      const res = await axios(`${API_PRODUCTS}`);
-      // console.log(res.data);
+      const res = await axios(`${API_PRODUCTS}?q=${search.get("q")}`);
       dispatch({
         type: "GET_PRODUCTS",
         payload: res.data,
