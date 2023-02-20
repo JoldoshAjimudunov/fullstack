@@ -36,17 +36,7 @@ const EditProduct = () => {
           value={product.title || ""}
           onChange={(e) => setProduct({ ...product, title: e.target.value })}
         />
-        <TextField
-          fullWidth
-          sx={{ m: 1 }}
-          variant="outlined"
-          id="standart-basic"
-          label="description"
-          value={product.description || ""}
-          onChange={(e) =>
-            setProduct({ ...product, description: e.target.value })
-          }
-        />
+
         <TextField
           fullWidth
           sx={{ m: 1 }}
@@ -56,15 +46,7 @@ const EditProduct = () => {
           value={product.price || ""}
           onChange={(e) => setProduct({ ...product, price: e.target.value })}
         />
-        <TextField
-          fullWidth
-          sx={{ m: 1 }}
-          variant="outlined"
-          id="standart-basic"
-          label="category"
-          value={product.category || ""}
-          onChange={(e) => setProduct({ ...product, category: e.target.value })}
-        />
+
         <TextField
           fullWidth
           sx={{ m: 1 }}

@@ -4,7 +4,7 @@ import cl from "./CredCard.module.css";
 
 const CredCard = () => {
   return (
-    <div>
+    <div className="">
       <body className={cl.bodySt}>
         <div className={cl.container}>
           <div className={cl.form}>
@@ -89,7 +89,16 @@ const CredCard = () => {
           </div>
         </div>
       </body>
-      <Footer />
+      <div
+        className="f"
+        style={{
+          backgroundImage:
+            "url(https://oir.mobi/uploads/posts/2021-03/1616546225_45-p-chernii-fon-na-rabochii-stol-48.jpg)",
+          backgroundPositionY: "bottom",
+        }}
+      >
+        <Footer />
+      </div>
     </div>
   );
 };
