@@ -1,6 +1,11 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer, useState } from "react";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import {
+  useLocation,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 import { API_PRODUCTS } from "../../const";
 
 export const productContext = createContext();
@@ -9,12 +14,17 @@ const INIT_STATE = {
   products: [],
   categories: [],
   oneProduct: {},
+  pages: 0,
 };
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "GET_PRODUCTS":
-      return { ...state, products: action.payload };
+      return {
+        ...state,
+        products: action.payload,
+        pages: Math.ceil(action.payload.count / 6),
+      };
     case "GET_CATEGORIES":
       return { ...state, categories: action.payload };
     case "GET_ONE_PRODUCT":
@@ -31,10 +41,11 @@ const ProductContextProvider = ({ children }) => {
   // console.log(state);
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   async function getProducts() {
     try {
-      const res = await axios(`${API_PRODUCTS}?q=${search.get("q")}`);
+      const res = await axios(`${API_PRODUCTS}${window.location.search}`);
       dispatch({
         type: "GET_PRODUCTS",
         payload: res.data,
@@ -83,16 +94,30 @@ const ProductContextProvider = ({ children }) => {
       setError(error);
     }
   }
-
+  //////////////////////
+  const fetchByParams = async (query, value) => {
+    const search = new URLSearchParams(location.search);
+    if (value === "all") {
+      search.delete(query);
+    } else {
+      search.set(query, value);
+    }
+    const url = `${location.pathname}?${search.toString()}`;
+    navigate(url);
+    getProducts();
+  };
+  ///////////////////////
   let value = {
     products: state.products,
     oneProduct: state.oneProduct,
+    pages: state.pages,
 
     getOneProduct,
     getProducts,
     addProducts,
     deleteProduct,
     editProduct,
+    fetchByParams,
   };
   return (
     <productContext.Provider value={value}>{children}</productContext.Provider>

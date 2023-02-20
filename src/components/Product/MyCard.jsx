@@ -11,10 +11,11 @@ import { productContext } from "../Contexts/ProductContextProvider";
 import "../Product/MyCard.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import BuildIcon from "@mui/icons-material/Build";
+import { useCart } from "../Contexts/CartContextProvider";
 
 export default function MyCard({ product }) {
   const { deleteProduct } = React.useContext(productContext);
-
+  const { addProductToCart } = useCart();
   return (
     <div class="container">
       <div class="box">

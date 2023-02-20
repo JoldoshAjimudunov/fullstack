@@ -26,6 +26,7 @@
 .item__text {
   text-align: start;
   margin-top: 10px;
+  color: rgb(184, 184, 184);
 }
 
 .bottom {
@@ -51,12 +52,28 @@
   display: flex;
   flex-wrap: wrap;
 }
-
-.mapgoogle {
-  width: 600;
+@media (max-width: 900px) {
+  .map {
+    width: 500px;
+    height: 300px;
+  }
 }
+
 @media (max-width: 600px) {
-  .mapgoogle {
-    width: 100%;
+  .map {
+    width: 400px;
+  }
+  .title {
+    margin-left: 80px;
+  }
+  .item__text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .map {
+    width: 300px;
+    height: 300px;
   }
 }

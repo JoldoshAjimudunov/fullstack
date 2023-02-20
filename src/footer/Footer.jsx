@@ -9,7 +9,7 @@ const Footer = () => {
           display: "flex",
           marginLeft: "12%",
           fontSize: "50px",
-          color: "white",
+          color: "rgb(184, 184, 184)",
         }}
       >
         Контакты
@@ -19,24 +19,18 @@ const Footer = () => {
         <div className={cl.map__left}>
           <div>
             <ul className={cl.cont__item}>
-              <li className={cl.item__text} style={{ color: "white" }}>
+              <li className={cl.item__text}>
                 191028 Манежный пер.2 ,Санкт-Петербург
               </li>
-              <li className={cl.item__text} style={{ color: "white" }}>
-                Время работы : 12:00-23:00
-              </li>
-              <li className={cl.item__text} style={{ color: "white" }}>
-                Телефон: +7 (969) 711-24-24
-              </li>
-              <li className={cl.item__text} style={{ color: "white" }}>
-                Резерв: Yclients
-              </li>
+              <li className={cl.item__text}>Время работы : 12:00-23:00</li>
+              <li className={cl.item__text}>Телефон: +7 (969) 711-24-24</li>
+              <li className={cl.item__text}>Резерв: Yclients</li>
             </ul>
             <ul>
-              <li className={cl.item__text} style={{ color: "white" }}>
+              <li className={cl.item__text}>
                 Присоединиться к нам - makers@gmail.com
               </li>
-              <li className={cl.item__text} style={{ color: "white" }}>
+              <li className={cl.item__text}>
                 Коммерческие предложения - makers.com@mail.ru
               </li>
             </ul>
@@ -64,26 +58,26 @@ const Footer = () => {
           <div class="mapouter">
             <div class="gmap_canvas">
               <iframe
-                className="mapgoogle"
-                width="100%"
+                className={cl.map}
+                width="550"
                 height="400"
                 id="gmap_canvas"
-                src="https://maps.google.com/maps?q=munchen&t=&z=10&ie=UTF8&iwloc=&output=embed"
-                // frameborder="0"
+                src="https://maps.google.com/maps?q=санкт петербург&t=&z=10&ie=UTF8&iwloc=&output=embed"
+                frameBorder="0"
                 scrolling="no"
-                // marginheight="0"
-                // marginwidth="0"
+                marginHeight="0"
+                marginWidth="0"
               ></iframe>
-              <a href="https://2yu.co"></a>
+              {/* <a href="https://2yu.co">2yu</a> */}
               <style>
                 .mapouter
-                {"position:relative;text-align:right;height:400px;width:600px"}
+                {"position:relative;text-align:right;height:400px;width:600px;"}
               </style>
               {/* <a href="https://embedgooglemap.2yu.co">html embed google map</a> */}
               <style>
                 .gmap_canvas{" "}
                 {
-                  "overflow:hidden;background:none!important;height:400px;width:600px"
+                  "overflow:hidden;background:none!important;height:400px;width:600px;"
                 }
               </style>
             </div>
