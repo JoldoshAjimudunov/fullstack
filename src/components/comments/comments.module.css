@@ -1,0 +1,29 @@
+.add__comment {
+  display: "flex";
+  margin: "50px";
+  justify-content: "center";
+  flex-wrap: "wrap";
+}
+.comm__inp {
+  width: 400px;
+}
+
+.comm__item {
+  width: 600px;
+  height: 50px;
+  background-color: rgb(235, 235, 235);
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  border-radius: 7px;
+}
+
+@media (max-width: 620px) {
+  .comm__inp {
+    width: 300px;
+  }
+  .comm__item {
+    width: 330px;
+  }
+}

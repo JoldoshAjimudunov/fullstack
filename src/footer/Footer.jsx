@@ -1,4 +1,6 @@
+import { Button } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 import cl from "./Footer.module.css";
 
 const Footer = () => {
@@ -34,6 +36,23 @@ const Footer = () => {
                 Коммерческие предложения - makers.com@mail.ru
               </li>
             </ul>
+            {/* ///////////// */}
+            <div>
+              <Link to={`/comments/`}>
+                <div
+                  size="small"
+                  style={{
+                    backgroundColor: "black",
+                    color: "white",
+                    padding: "10px 0",
+                    opacity: "0.3",
+                  }}
+                >
+                  отзывы
+                </div>
+              </Link>
+            </div>
+            {/* //////////////// */}
             <div>
               <img
                 className={cl.logos}

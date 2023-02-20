@@ -3,15 +3,16 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { Button, CardActionArea, CardActions, IconButton } from "@mui/material";
 import axios from "axios";
 import { API_PRODUCTS } from "../../const";
 import { Link } from "react-router-dom";
 import { productContext } from "../Contexts/ProductContextProvider";
 import { useCart } from "../Contexts/CartContextProvider";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 export default function MyCard({ product }) {
-  const { deleteProduct } = React.useContext(productContext);
+  const { deleteProduct, toggleLike } = React.useContext(productContext);
   const { addProductToCart } = useCart();
   return (
     <Card sx={{ width: 345, margin: "3%" }}>
@@ -32,18 +33,25 @@ export default function MyCard({ product }) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          {product.price}
+        <Button size="small" color="success">
+          {product.price} $
         </Button>
         <Button
           size="small"
-          color="primary"
+          color="error"
           onClick={() => deleteProduct(product.id)}
         >
           Delete
         </Button>
         <Link to={`/edit/${product.id}`}>
-          <Button size="small" color="primary">
+          <Button
+            size="small"
+            style={{
+              backgroundColor: "brown",
+              color: "white",
+              margin: "0 5px",
+            }}
+          >
             Edit
           </Button>
         </Link>
@@ -51,9 +59,27 @@ export default function MyCard({ product }) {
           onClick={() => {
             addProductToCart(product);
           }}
+          style={{ backgroundColor: "brown", color: "white", height: "31px" }}
         >
           add
         </Button>
+        {/* <Typography variant="body" color="error">
+          {product.likes}
+        </Typography>
+        <IconButton onClick={() => toggleLike(product.id)}>
+          <FavoriteIcon color={product.liked_by_user ? "error" : ""} />
+        </IconButton> */}
+        {/* <Link to={`/comments/${product.id}`}>
+          <Button
+            size="small"
+            style={{
+              backgroundColor: "brown",
+              color: "white",
+              }}
+          >
+            c
+          </Button>
+        </Link> */}
       </CardActions>
     </Card>
   );
