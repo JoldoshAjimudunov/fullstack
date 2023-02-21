@@ -104,7 +104,7 @@
   ],
   "comments": [
     {
-      "task": "qwerety",
+      "task": "comment",
       "status": false,
       "id": 1
     },
@@ -117,11 +117,6 @@
       "task": "asdfas",
       "status": false,
       "id": 3
-    },
-    {
-      "task": "qrwetyr",
-      "status": false,
-      "id": 4
     }
   ]
 }

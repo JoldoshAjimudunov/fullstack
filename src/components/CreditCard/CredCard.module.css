@@ -129,6 +129,7 @@ label {
 
 .cardsubmit:hover {
   background-color: #4183f5;
+  color: rgb(235, 235, 235);
 }
 .navb__it {
   display: flex;

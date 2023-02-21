@@ -63,23 +63,6 @@ export default function MyCard({ product }) {
         >
           add
         </Button>
-        {/* <Typography variant="body" color="error">
-          {product.likes}
-        </Typography>
-        <IconButton onClick={() => toggleLike(product.id)}>
-          <FavoriteIcon color={product.liked_by_user ? "error" : ""} />
-        </IconButton> */}
-        {/* <Link to={`/comments/${product.id}`}>
-          <Button
-            size="small"
-            style={{
-              backgroundColor: "brown",
-              color: "white",
-              }}
-          >
-            c
-          </Button>
-        </Link> */}
       </CardActions>
     </Card>
   );
