@@ -11,11 +11,13 @@ import { productContext } from "../Contexts/ProductContextProvider";
 import "../Product/MyCard.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import BuildIcon from "@mui/icons-material/Build";
-import { useCart } from "../Contexts/CartContextProvider";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import CartContextProvider, { useCart } from "../Contexts/CartContextProvider";
 
 export default function MyCard({ product }) {
   const { deleteProduct } = React.useContext(productContext);
   const { addProductToCart } = useCart();
+
   return (
     <div class="container">
       <div class="box">
@@ -76,9 +78,17 @@ export default function MyCard({ product }) {
               </Link>
             </CardActions>
             <li>
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
+              <IconButton
+                onClick={() => {
+                  addProductToCart(product);
+                }}
+                style={{
+                  color: "red",
+                  height: "31px",
+                }}
+              >
+                <FavoriteIcon />
+              </IconButton>
             </li>
             <li>
               <a href="#">

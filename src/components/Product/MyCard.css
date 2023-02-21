@@ -6,12 +6,12 @@
   flex-wrap: wrap;
   padding: 50px;
 }
+
 .container .box {
   position: relative;
-  width: 50%;
+  width: 350px;
   height: 300px;
   background: rgb(95, 51, 4);
-  margin: 20px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,4 +118,17 @@
 }
 .container .box .sci a:hover {
   color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 720px) {
+  .container .box {
+    width: 250px;
+    height: 230px;
+  }
+}
+@media (max-width: 375px) {
+  .container .box {
+    width: 200px;
+    height: 180px;
+  }
 }
