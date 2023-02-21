@@ -4,7 +4,7 @@
   margin-right: 17%;
 }
 
-input[type="text"] {
+.inpp {
   height: auto;
   font-family: "Montserrat";
   font-size: 50px;
@@ -23,16 +23,16 @@ input[type="text"] {
   transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
   cursor: pointer;
 }
-input[type="text"]:focus {
+.inpp:focus {
   width: 70%;
   z-index: 1;
   border-bottom: 5px solid #541e1b;
   cursor: text;
 }
-input[type="text"]:focus + input[type="submit"] {
+.inpp:focus + .subb {
   opacity: 1;
 }
-input[type="submit"] {
+.subb {
   height: 67px;
   width: 63px;
   display: inline-block;
@@ -62,5 +62,20 @@ input[type="submit"] {
 @media (max-width: 600px) {
   .p-text {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 990px) {
+  .ermm {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50%;
+  }
+}
+@media (max-width: 375px) {
+  .ermm {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70%;
   }
 }

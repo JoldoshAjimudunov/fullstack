@@ -22,11 +22,11 @@ const ProductList = () => {
   const [value, setValue] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
-  const count = Math.ceil(products.length / 9);
+  const count = Math.ceil(products.length / 6);
 
   function currentData() {
-    const begin = (currentPage - 1) * 9;
-    const end = begin + 9;
+    const begin = (currentPage - 1) * 6;
+    const end = begin + 6;
     return products.slice(begin, end);
   }
 
@@ -75,7 +75,7 @@ const ProductList = () => {
             </h1>
           </span>
         </div>
-        <hr className="hr-header" style={{ width: "70%" }} />
+        <hr style={{ width: "70%", marginLeft: "15%" }} />
         <p className="p-text" style={{ color: "white" }}>
           Дорогие гости, <br />
           мы работаем для Вас <br />в режиме доставки с 12:00 до 22:30
@@ -90,12 +90,12 @@ const ProductList = () => {
               value={value}
               onChange={(e) => setValue(e.target.value)}
               type="text"
-              id="search"
+              className="inpp"
               name="search"
               placeholder="Search..."
               autocomplete="off"
             />
-            <input id="search-btn" type="submit" />
+            <input className="subb" type="submit" />
           </form>
         </div>
       </div>
@@ -148,7 +148,10 @@ const ProductList = () => {
       </div>
       {/* ///////////////////////////// */}
 
-      <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+      <Box
+        className="ermm"
+        sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+      >
         {currentData().map((product, index) => (
           <MyCard product={product} getProducts={getProducts} key={index} />
         ))}
