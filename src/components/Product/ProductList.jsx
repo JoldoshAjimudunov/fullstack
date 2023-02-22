@@ -13,6 +13,8 @@ import Footer from "../../footer/Footer";
 import { productContext } from "../Contexts/ProductContextProvider";
 import Navbar from "../Navbar/Navbar";
 import MyCard from "./MyCard";
+import "../Product/ProductList.css";
+import { grey } from "@mui/material/colors";
 
 const ProductList = () => {
   const { getProducts, products, fetchByParams, pages } =
@@ -21,11 +23,11 @@ const ProductList = () => {
   const [value, setValue] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
-  const count = Math.ceil(products.length / 9);
+  const count = Math.ceil(products.length / 6);
 
   function currentData() {
-    const begin = (currentPage - 1) * 9;
-    const end = begin + 9;
+    const begin = (currentPage - 1) * 6;
+    const end = begin + 6;
     return products.slice(begin, end);
   }
 
@@ -46,37 +48,56 @@ const ProductList = () => {
   }, [currentPage]);
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage:
+          "url(https://media.istockphoto.com/id/1130714046/photo/empty-dark-wooden-table-in-front-of-abstract-blurred-bokeh-background-of-restaurant-can-be.jpg?b=1&s=170667a&w=0&k=20&c=81AFO47LmBWjAa8643R4JO4bFyBRPAkYlH23Cc6t3Cw=)",
+
+        backgroundSize: "cover",
+        backgroundColor: "transparent",
+
+        backgroundPosition: "bottom",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <div>
         <Navbar />
-        <div className="header-list">
+        <div>
           <span>
-            <h1 className="menu-text">Menu</h1>
-          </span>
-          <span>
-            <a href="/credit" className="oplata">
-              Перейти к оплате
-            </a>
+            <h1
+              style={{
+                color: "white",
+                marginLeft: "14%",
+                fontWeight: "inherit",
+                marginTop: "100px",
+              }}
+            >
+              Menu
+            </h1>
           </span>
         </div>
-        <hr className="hr-header" />
-        <p className="p-text">
+        <hr style={{ width: "70%", marginLeft: "15%" }} />
+        <p className="p-text" style={{ color: "white" }}>
           Дорогие гости, <br />
           мы работаем для Вас <br />в режиме доставки с 12:00 до 22:30
         </p>
-
-        <div className="inp-btn">
-          <input
-            placeholder="Поиск"
-            style={{ width: "75ch", height: "20px" }}
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-          />
-          <Link to="/create">
-            <button className="btnAdd">
-              <p className="addProduct">addProduct</p>
-            </button>
-          </Link>
+        <div id="wrapper">
+          <form
+            action=""
+            autocomplete="on"
+            style={{ backgroundColor: "transparent" }}
+          >
+            <input
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              type="text"
+              className="inpp"
+              name="search"
+              placeholder="Search..."
+              autocomplete="off"
+            />
+            <input className="subb" type="submit" />
+          </form>
         </div>
       </div>
       {/* ///////////////////////////// */}
@@ -99,28 +120,68 @@ const ProductList = () => {
             name="radio-buttons-group"
           >
             <FormControlLabel
-              sx={{ width: "120px", fontSize: "2rem" }}
+              sx={{ width: "120px", fontSize: "2rem", color: "gray" }}
               value="all"
-              control={<Radio color="default" />}
+              control={
+                <Radio
+                  sx={{
+                    color: grey[500],
+                    "&.Mui-checked": {
+                      color: grey[300],
+                    },
+                  }}
+                />
+              }
               label="все"
             />
             <FormControlLabel
-              sx={{ width: "120px" }}
               value="ff"
-              control={<Radio color="default" />}
+              control={
+                <Radio
+                  // {...controlProps("e")}
+                  sx={{
+                    color: grey[500],
+                    "&.Mui-checked": {
+                      color: grey[300],
+                    },
+                  }}
+                  color="default"
+                />
+              }
+              sx={{ width: "120px", color: "grey" }}
               label="фаст-фуд"
             />
             <FormControlLabel
-              sx={{ width: "120px" }}
+              sx={{ width: "120px", color: "gray" }}
               value="soda"
-              control={<Radio color="default" />}
+              control={
+                <Radio
+                  sx={{
+                    color: grey[500],
+                    "&.Mui-checked": {
+                      color: grey[300],
+                    },
+                  }}
+                  color="default"
+                />
+              }
               label="напитки"
             />
 
             <FormControlLabel
-              sx={{ width: "120px" }}
+              sx={{ width: "120px", color: "gray" }}
               value="noodle"
-              control={<Radio color="default" />}
+              control={
+                <Radio
+                  sx={{
+                    color: grey[500],
+                    "&.Mui-checked": {
+                      color: grey[300],
+                    },
+                  }}
+                  color="default"
+                />
+              }
               label="лапша"
             />
           </RadioGroup>
@@ -128,7 +189,10 @@ const ProductList = () => {
       </div>
       {/* ///////////////////////////// */}
 
-      <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+      <Box
+        className="ermm"
+        sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+      >
         {currentData().map((product, index) => (
           <MyCard product={product} getProducts={getProducts} key={index} />
         ))}

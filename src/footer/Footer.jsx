@@ -45,7 +45,7 @@ const Footer = () => {
                     backgroundColor: "black",
                     color: "white",
                     padding: "10px 0",
-                    opacity: "0.3",
+                    opacity: "0.5",
                   }}
                 >
                   отзывы

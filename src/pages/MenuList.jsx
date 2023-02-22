@@ -27,6 +27,7 @@ const MenuList = () => {
           alt=""
         />
       </div>
+
       <Footer />
     </div>
   );

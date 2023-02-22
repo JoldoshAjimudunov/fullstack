@@ -1,5 +1,5 @@
 .menu__img {
-  width: 900px;
+  width: 50%;
   margin-top: 50px;
 }
 .menuimg__cont {
@@ -8,13 +8,13 @@
   align-items: center;
 }
 .menuimg__title {
-  width: 1200px;
+  width: 60%;
   margin-left: 0;
   margin-right: 0;
   font-size: 30px;
   font-family: Arial;
   font-weight: light;
-  margin-left: 100px;
+  margin-left: 10%;
   margin-top: 50px;
 }
 .menu__box {

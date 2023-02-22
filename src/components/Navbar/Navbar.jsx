@@ -101,7 +101,7 @@ function Navbar() {
                 <a
                   className="menu__item"
                   href="#"
-                  onClick={() => navigate("/admin")}
+                  onClick={() => navigate("/create")}
                 >
                   Добавить Продукт{" "}
                 </a>

@@ -55,24 +55,11 @@ const ProductContextProvider = ({ children }) => {
     }
   }
 
-  // async function getCategories() {
-  //   try {
-  //     const res = await axios(`${API_CATEGORY}list/`);
-  //     dispatch({
-  //       type: "GET_CATEGORIES",
-  //       payload: res.data.results,
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //     setError(error);
-  //   }
-  // }
-
-  async function addProducts(product) {
+  async function addProducts(id, menu) {
     try {
-      const res = await axios.post(`${API_PRODUCTS}`, product);
+      const res = await axios.post(`${API_PRODUCTS}${id}`, menu);
       navigate("/products");
-      // console.log(res.data);
+      console.log(res.data);
       // navigate("/products");
     } catch (error) {
       console.log(error);

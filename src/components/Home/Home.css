@@ -117,3 +117,61 @@
   background-size: cover;
   background-position: bottom;
 }
+
+.oneback {
+  background-image: url("https://abrakadabra.fun/uploads/posts/2022-03/1646426638_1-abrakadabra-fun-p-fon-dlya-restorana-1.jpg");
+  background-repeat: no-repeat;
+  height: 1000px;
+  width: 100%;
+}
+
+.timg {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 100px;
+}
+
+.trbtn {
+  margin-top: 90px;
+  margin-left: 35%;
+  background-color: initial;
+  height: 70px;
+  width: 30%;
+  font-size: 30px;
+  color: #ffffff;
+  border-width: 3px;
+  border-color: #f8f5f5;
+  border-radius: 15px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.trbtn:hover {
+  background-color: rgb(140, 97, 45);
+}
+
+.trbtn2 {
+  margin-left: 35%;
+  margin-top: 50px;
+  background-color: initial;
+  height: 70px;
+  width: 30%;
+  font-size: 20px;
+  color: #ffffff;
+  border-width: 3px;
+  border-color: #f8f5f5;
+  border-radius: 15px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .trbtn {
+    font-size: 15px;
+  }
+}
+@media (max-width: 450px) {
+  .trbtn2 {
+    font-size: 13px;
+  }
+}
