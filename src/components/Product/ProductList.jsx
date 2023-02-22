@@ -104,6 +104,7 @@ const ProductList = () => {
         <div style={{ marginTop: "32px", width: "1200px" }}>
           <RadioGroup
             style={{
+              color: "white",
               display: "flex",
               flexDirection: "row",
               margin: "0 auto",
@@ -121,26 +122,26 @@ const ProductList = () => {
             <FormControlLabel
               sx={{ width: "120px", fontSize: "2rem" }}
               value="all"
-              control={<Radio color="default" />}
+              control={<Radio color="success" />}
               label="все"
             />
             <FormControlLabel
               sx={{ width: "120px" }}
               value="ff"
-              control={<Radio color="default" />}
+              control={<Radio color="success" />}
               label="фаст-фуд"
             />
             <FormControlLabel
               sx={{ width: "120px" }}
               value="soda"
-              control={<Radio color="default" />}
+              control={<Radio color="success" />}
               label="напитки"
             />
 
             <FormControlLabel
               sx={{ width: "120px" }}
               value="noodle"
-              control={<Radio color="default" />}
+              control={<Radio color="success" />}
               label="лапша"
             />
           </RadioGroup>
@@ -161,7 +162,7 @@ const ProductList = () => {
           count={count}
           page={currentPage}
           variant="outlined"
-          color="primary"
+          color="success"
           onChange={(e, p) => setCurrentPage(p)}
         />
       </Box>

@@ -51,7 +51,7 @@ export default function Register() {
 
   return (
     <div class="header" theme={theme}>
-      <div class="container">
+      <div class="container1">
         <form class="form">
           <h1>Register</h1>
 
@@ -134,7 +134,7 @@ export default function Register() {
           </button>
         </form>
       </div>
-      <div style={{ height: "130px" }}></div>
+      <div style={{ height: "300px" }}></div>
     </div>
   );
 }
