@@ -63,15 +63,15 @@ const CredCard = () => {
                         <option value="2029">2029</option>
                         <option value="2030">2030</option>
                       </select>
-                    </td>
-                    <td className={cl.tablecolumn}>
-                      <label for="card-cvv">CVV</label>
-                      <input
-                        name="card-cvv"
-                        className={cl.cardcvv}
-                        type="text"
-                        DefaultValue=""
-                      />
+                      <td className={cl.tablecolumn}>
+                        <label for="card-cvv">CVV</label>
+                        <input
+                          name="card-cvv"
+                          className={cl.cardcvv}
+                          type="text"
+                          DefaultValue=""
+                        />
+                      </td>
                     </td>
                   </tr>
                 </table>

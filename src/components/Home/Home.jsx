@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="oneback">
@@ -14,8 +15,12 @@ const Home = () => {
           src="https://thumb.tildacdn.com/tild6266-6166-4237-b637-636230646265/-/resize/990x/-/format/webp/Snimok-ekrana-2022-1.png"
           alt="Here img"
         />
-        <button className="trbtn">Меню</button>
-        <button className="trbtn2">Подарочный Сертификат</button>
+        <button className="trbtn" onClick={() => navigate("/products")}>
+          Меню
+        </button>
+        <button className="trbtn2" onClick={() => navigate("/menulist")}>
+          Подарочный Сертификат
+        </button>
       </div>
       <div className="back">
         <div class="tn-atom" field="tn_text_1470209944682">
@@ -179,7 +184,7 @@ const Home = () => {
           страчателлой или маракуйей, бегония и алоэ, гребешок с соусом из
           халапеньо, — читаешь меню, как захватывающий кулинарный роман.
         </div>
-        <button className="btn" onClick={() => Navigate("/products")}>
+        <button className="btn" onClick={() => navigate("/menulist")}>
           Подробнее
         </button>
 

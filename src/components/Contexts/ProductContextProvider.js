@@ -57,7 +57,7 @@ const ProductContextProvider = ({ children }) => {
 
   async function addProducts(product) {
     try {
-      const res = await axios.post(`${API_PRODUCTS}`, product);
+      const res = await axios.post(`${API_PRODUCTS}menu/menu//`, product);
       navigate("/products");
       // console.log(res.data);
       // navigate("/products");
@@ -68,7 +68,7 @@ const ProductContextProvider = ({ children }) => {
   }
 
   async function deleteProduct(id) {
-    await axios.delete(`${API_PRODUCTS}/${id}`);
+    await axios.delete(`${API_PRODUCTS}menu/menu//{slug}/${id}`);
     getProducts();
   }
 

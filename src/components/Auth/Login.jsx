@@ -30,7 +30,7 @@ export default function Login() {
 
   return (
     <div class="header" theme={theme}>
-      <div class="container">
+      <div class="container1">
         <form class="form">
           <h1>Login</h1>
 
@@ -88,7 +88,7 @@ export default function Login() {
           </button>
         </form>
       </div>
-      <div style={{ height: "130px" }}></div>
+      <div style={{ height: "300px" }}></div>
     </div>
   );
 }
